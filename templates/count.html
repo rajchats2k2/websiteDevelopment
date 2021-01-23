@@ -1,0 +1,13 @@
+<a href="{%url 'about-us' %}"><b>About Us</b></a>
+<br />
+<br />
+<a color="blue" href= "{% url 'home' %}" ><b>Start Again</b></a>
+
+<h1>There are {{count}} words in our essay</h1>
+Full Text is: {{fulltext}}
+<h1>Word Count:</h1>
+{% for word, count_total in sortedwords %}
+{{word}} :: {{count_total}}
+<br />
+
+{% endfor %}
